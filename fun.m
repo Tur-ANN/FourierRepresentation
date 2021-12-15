@@ -1,6 +1,6 @@
 function null = fun(numHarmonics)
 % numHarmonics =2;
-f = (1:numHarmonics).*2-1;
+f = (1:numHarmonics);
 fs = max(f)*1e2;
 dt = 1/fs;
 T = 1/min(f);
@@ -20,7 +20,7 @@ end
 % plot(t,real(s));
 % plot(t,imag(s));
 % plot(t,abs(s))
-% legend("real","imag")
+% legend("real","imag","abs(sum)")
 % figure();
 % plot(s)
 
@@ -40,8 +40,8 @@ for i = 1:length(t)
     for k = 1:length(f)
         plot(center(k)+harmonics(k,:))
     end
-    plot([2,2])
-    plot([-2,-2])
+    plot([0,5],[5,0],'.')
+    plot([0,-5],[-5,0],'.')
     pause(dt/1e2)
     hold off
 end
