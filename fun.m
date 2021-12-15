@@ -1,6 +1,6 @@
 function null = fun(numHarmonics)
 % numHarmonics =2;
-f = (1:numHarmonics);
+f = (1:numHarmonics).*2-1;
 fs = max(f)*1e2;
 dt = 1/fs;
 T = 1/min(f);
